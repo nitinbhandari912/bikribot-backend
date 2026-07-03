@@ -9,7 +9,7 @@ app = FastAPI()
 # GEMINI CONFIGURATION (Using Environment Variables)
 # ==========================================
 genai.configure(api_key=os.environ.get("GENAI_API_KEY"))
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
 @app.post("/scan")
 async def scan_item(file: UploadFile = File(...)):
